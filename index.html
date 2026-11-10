@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>NEON BREAKPOINT — Web FPS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="shell">
+  <canvas id="game" aria-label="Jeu Neon Breakpoint"></canvas>
+  <div id="hud" class="hidden">
+    <div class="topline"><span id="objective">SECTEUR 01 // ÉLIMINER LA MENACE</span><span id="wave">VAGUE 01</span></div>
+    <div class="left-hud"><div class="small">INTÉGRITÉ</div><div class="health"><i id="healthbar"></i></div><strong id="healthnum">100</strong><div class="small" id="style">STYLE ×1</div></div>
+    <div class="right-hud"><div class="weapon-name" id="weaponname">VANTA / PISTOLET</div><div class="ammo"><b id="ammo">12</b><span> / </span><span id="reserve">72</span></div><div class="small">CHARGEUR / RÉSERVE</div></div>
+    <div id="crosshair"><i></i><i></i><i></i><i></i><b></b></div>
+    <div id="hitmarker">×</div><div id="toast"></div>
+    <div id="bossbar" class="hidden"><span>WARDEN // UNITÉ DE CONFINEMENT</span><div><i id="bosshealth"></i></div></div>
+    <div id="hint">WASD déplacer · Souris viser/tirer · Espace sauter · Shift sprint · C glisser · Q dash · R recharger · 1–4 armes</div>
+  </div>
+  <section id="menu" class="panel">
+    <div class="eyebrow">PROJET DE COMBAT // BUILD 0.1</div><h1>NEON<br><em>BREAKPOINT</em></h1>
+    <p>Une installation a perdu le contrôle de son noyau. Traversez le complexe, survivez aux unités de sécurité et neutralisez le Warden.</p>
+    <button id="play">INITIALISER LA MISSION <span>↗</span></button>
+    <div class="menu-foot"><span>WEBGL-FREE / CANVAS ENGINE</span><span>CLAVIER + SOURIS</span></div>
+    <div class="menu-controls">WASD — mouvement　 SPACE — saut　 SHIFT — sprint　 C — slide　 Q — dash<br>CLIC GAUCHE — tir　 CLIC DROIT — visée　 R — recharge　 1–4 — armes</div>
+  </section>
+  <section id="pause" class="panel hidden"><div class="eyebrow">SYSTÈME SUSPENDU</div><h2>PAUSE</h2><button id="resume">REPRENDRE</button><button id="restart" class="secondary">RECOMMENCER</button><label>VOLUME SFX <input id="volume" type="range" min="0" max="100" value="65"></label><label>CAMERA SHAKE <input id="shake" type="range" min="0" max="100" value="65"></label></section>
+  <section id="end" class="panel hidden"><div class="eyebrow" id="endtag">MISSION TERMINÉE</div><h2 id="endtitle">SECTEUR NETTOYÉ</h2><p id="endcopy"></p><button id="again">RELANCER LA MISSION</button></section>
+</main>
+<script type="module" src="src/main.js"></script>
+</body></html>
